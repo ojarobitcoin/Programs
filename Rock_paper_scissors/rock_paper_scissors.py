@@ -19,7 +19,7 @@ elif platform == "win32":
     wait="pause"
 #Program start
 def whole():
-    global points_bot, points, all_you,all_bot #points out the global variables to use it
+    global points_bot, points, all_you,all_bot #points out the global variables to use
     choices=["rock","paper","scissors"]
     your_choice=input("What's your choice?\nrock\npaper\nscissors\n=")
     all_you[i]=your_choice
