@@ -3,9 +3,7 @@
 import random
 import os
 #Global variables
-points=0
-points_bot=0
-i=0
+points,points_bot,i=0,0,0
 all_you=["0",]*3
 all_bot=["0",]*3
 #Os identification system
@@ -60,6 +58,14 @@ def final():
     print(f"U choosed {all_you[0]} and the bot choosed {all_bot[0]} on the first game.")
     print(f"U choosed {all_you[1]} and the bot choosed {all_bot[1]} on the second game.")
     print(f"U choosed {all_you[2]} and the bot choosed {all_bot[2]} on the third game.\n\n")
+print("""Here is the rock paper scissors game:
+The rules are:
+-It's a best of 3 game.
+-The rock wins against scissors and loses against paper
+-The scissors wins agains paper and loses against rock
+-The paper wins against rock and loses against scissors""")
+os.system(wait)
+os.system(clear)
 while i < 3:
     choices=["rock","paper","scissors"]
     whole()
