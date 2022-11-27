@@ -32,7 +32,7 @@ if len(pswrd) >= 8:
         if i in special:
             s_count+=3
         if i not in special and not i.isupper() and not i.isdigit() and not i.islower():
-            print("ERROR")
+            print("ERROR YOUR PASSWORD CONTAINS A ILLEGAL CHARACTER!")
             quit()
 else:
     print("The password has less than 8 characters.")
