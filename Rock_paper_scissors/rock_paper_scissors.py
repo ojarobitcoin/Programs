@@ -10,16 +10,13 @@ all_bot=["0",]*3
 from sys import platform
 if platform == "linux" or platform == "linux2":
     clear="clear"
-    wait=""
 elif platform == "darwin":
     clear="clear"
-    wait=""
 elif platform == "win32":
     clear="cls"
-    wait="pause"
 #Program start
 def whole():
-    global points_bot, points, all_you,all_bot #points out the global variables to use
+    global points_bot, points, all_you,all_bot #points out the global variables to use it
     choices=["rock","paper","scissors"]
     your_choice=input("What's your choice?\nrock\npaper\nscissors\n=")
     all_you[i]=your_choice
@@ -64,16 +61,16 @@ The rules are:
 -The rock wins against scissors and loses against paper
 -The scissors wins agains paper and loses against rock
 -The paper wins against rock and loses against scissors""")
-os.system(wait)
+input("\nPress enter to continue...")
 os.system(clear)
 while i < 3:
     choices=["rock","paper","scissors"]
     whole()
     i+=1   
-    os.system(wait) #pauses the system until further notice
+    input("\nPress enter to continue...")
     os.system(clear)  #clears all of the code above(just to make it look cleaner)
     print(f"U have {points} and the bot has {points_bot}")
-os.system(wait)
+input("\nPress enter to continue...")
 if points>points_bot:
     print("\n\n\n\n\n")
     final()
