@@ -7,7 +7,6 @@ people:
 
     ->id
     ->money - amount of money that id(person) has.
-
 earnings:
 
     ->id
@@ -19,6 +18,8 @@ money:
     ->old - the amount before you ran the program.
     ->new - the amount after you ran the program.
 
-This path has many paths:
+This directory has many paths:
 
-people_money_random:
+If u dont have any database created i have some programs to make your job easier:
+
+people_money_random: creates the table people
