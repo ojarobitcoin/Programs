@@ -8,9 +8,9 @@ people:
   ->money - amount of money that id(person) has.
 
 earnings:
-  ->id
-  ->perc - percentage of what of the total amount of money is invested in that stock.
-  ->returns - the return of the stock.
+  id
+  perc - percentage of what of the total amount of money is invested in that stock.
+  returns - the return of the stock.
 
 money:
   ->id
