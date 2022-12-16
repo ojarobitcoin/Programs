@@ -1,2 +1,1 @@
-This progra finds the codons in a given file.
-
+Here is my progress in python programming.
