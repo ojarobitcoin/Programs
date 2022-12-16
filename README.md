@@ -1,2 +1,2 @@
-# Programs
-Journey of coding in python
+This progra finds the codons in a given file.
+
