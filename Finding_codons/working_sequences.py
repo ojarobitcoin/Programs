@@ -1,7 +1,7 @@
-file1,names,i=[],[],0
+file1,names,i,bases=[],[],0,["A","T","G","C"]
 with open(input("Which file are you going to analyze?/n>>"), "r") as gff:
     for lines in gff:
-        if "U" in lines:
+        if set(lines).difference(bases) == set():#Store the names and all the sequences
             continue
         cord1,cord2=(lines.find("ATG")),(lines.find("TAG"))
         if lines.startswith(">"):
@@ -19,5 +19,3 @@ with open(input("Which file are you going to analyze?/n>>"), "r") as gff:
         if not len(lines[lines.find("ATG"):lines.find("TGA")+3:])<5:
             print(f"{names}    {len(motiffind)}    {cord1,cord2}    TGA\n{motiffind}")
             file1.append((lines[lines.find("ATG"):lines.find("TGA")+3:]).replace("\n", ""))
-print(len(file1))
-print(i)
