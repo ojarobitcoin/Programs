@@ -9,13 +9,36 @@ mydb= mysql.connector.connect(
     password= "password",
     database= "bank"    
 )
-print(mydb)
 my_cursor=mydb.cursor()
-i=1
-while i<27:
-    print(i)
-    x=random.randint(0,10000)
-    print(random.randint(0,10000))
-    my_cursor.execute(f"INSERT INTO people VALUES({i},{x})")
-    mydb.commit()
+#Add stuff to the table people
+i,id=0,0
+my_cursor.execute(f"SELECT id FROM people;")
+for lines in my_cursor:
     i+=1
+while id<10:
+    id+=1
+    i+=1
+    money=random.randint(0,10000)
+    my_cursor.execute(f"INSERT INTO people VALUES({i},{money})")
+    mydb.commit()
+#Add stuff to the table earnings
+i,id,total=0,0,100
+my_cursor.execute(f"SELECT * FROM earnings;")
+for lines in my_cursor:
+    i+=1
+while total>0:
+    id+=1
+    i+=1
+    returns=random.uniform(0,13)
+    perc=random.uniform(2,15)
+    my_cursor.execute(f"INSERT INTO earnings VALUES({i},{perc},{returns})")
+    mydb.commit()
+    total-=perc
+    print
+    if total==0:
+        break
+    else:
+        continue
+
+    
+#Create if does't exit the money table
