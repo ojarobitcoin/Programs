@@ -1,6 +1,7 @@
 This program does the following:
 
 Creates 3 tables that are required for the main program to run:
+
 	->people
 	->earnings
 	->money
