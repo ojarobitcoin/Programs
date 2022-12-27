@@ -34,12 +34,11 @@ got=[]
 #really starts here: makes the total
 total=0
 for value in money:
-    total+=value 
-each=[]
+    total+=value
 i=0
 total_return=0
 for value in returns:
-    total_return+=int(((total*perc[i])/100)*value)/100
+    total_return+=round((total*perc[i]*value)/10000,1)
     i+=1
 #count the lines in money(table) and:
 #if it matches it'll update themine
@@ -47,7 +46,7 @@ for value in returns:
 my_cursor.execute("SELECT * FROM money;")
 for lines in my_cursor:
     new=lines[2]
-if new==int(total_return):
+if new==total_return:
     print("The values haven't changed!")
 else:
     my_cursor.execute(f"UPDATE money SET new={total_return} where id=1")
