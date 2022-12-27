@@ -3,7 +3,7 @@ import mysql.connector
 import random
 mydb= mysql.connector.connect(
     host ="localhost",
-    user= "guimbreon", 
+    user= "user", 
     password= "password",
     database= "bank"    
 )
@@ -12,7 +12,7 @@ my_cursor=mydb.cursor()
 i,id=0,0
 my_cursor.execute("DROP TABLE IF EXISTS people;")
 my_cursor.execute("CREATE TABLE IF NOT EXISTS people (id int, money int);")
-#my_cursor.execute(f"SELECT id FROM people;")  #ADD this thing if u want to delete line 17 and only create new items in the table
+#my_cursor.execute(f"SELECT id FROM people;")  #ADD this thing if u want to delete line 13 and only create new items in the table
 #for lines in my_cursor:   
 #    i+=1
 while id<26:
