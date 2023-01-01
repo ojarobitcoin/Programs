@@ -26,7 +26,6 @@ while aproved!=2:
     if email not in all_emails:
         aproved+=1
     if "@" not in email:
-        print("kload")
         aproved=0
         email=input("ERROR:email has to have @\n\nWhat's your email?\n>>")
     elif "@" in email:
