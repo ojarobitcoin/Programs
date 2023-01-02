@@ -1,6 +1,6 @@
-This is a password streght testing software!
+This is a password testing software!
 
-Here u can test the streght of your password and make it better!
+Here u can test the your password and make it better!
 
 Minimum values for a valid password:
 
@@ -13,4 +13,3 @@ Minimum values for a valid password:
 Do you have a WEAK password and want to make it SUPER STRONG?
 
 	-Use the password_generator script
-
