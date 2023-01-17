@@ -3,6 +3,7 @@ num=str(random.randint(1000,9999))
 all,password=[],""
 for char in num:
     all.append(char)
+    kk
     all.append(random.choice("~`!@#$%^&*()_-+={[}]|\:;<,>.?/"))
     all.append(random.choice("uSNcciihCakcjRiQrREzhiEfdYcAuGGuIYwIvwkRGhQLicPzDywG"))
 random.shuffle(all)
